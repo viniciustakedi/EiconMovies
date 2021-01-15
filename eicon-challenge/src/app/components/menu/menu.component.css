@@ -1,0 +1,27 @@
+/* zerando marcaçoes do menu */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* definindo tamanho da imagem */
+#logo{
+    width: 9rem;
+    height: 3.5rem;
+    margin-left: 0.5rem;
+}
+
+/* @Media para deixar responsivo */
+@media(max-width: 480px){
+    #logo{
+        width: 8rem;
+        height: 3rem;
+    }
+}
+
+@media(max-width: 339px){
+    #logo{
+        width: 7rem;
+        height: 2.5rem;
+    }
+}

@@ -1,0 +1,20 @@
+<div class="container-home">
+    <div class="initial-home">
+        <h1>Wellcome to Eicon Movies</h1>
+        <h2>Find your favorite movie or a new movie...</h2>
+        <div class="search-movies">
+            <input type="search" name="movsearch" placeholder="Search a movie" id="movsearch">
+            <div class="broken-line-responsive">
+                <input type="button" id="searchbutton" value="Search">
+            </div>
+        </div>
+    </div>
+    <div class="some-movies">
+        <h1>Some movies...</h1>
+        <div class="movies">
+            <div class="movie">
+                <h2 *ngFor="let m of movies">{{m.title}}</h2>
+            </div>
+        </div>
+    </div>
+</div>

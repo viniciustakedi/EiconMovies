@@ -1,0 +1,231 @@
+/* Div initial home para inserir o background da home */
+
+.initial-home {
+    width: 100%;
+    height: 50rem;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-image: url("../../../assets/images/wallpaper-home.png");
+    border-bottom: 6px solid #E84426;
+    box-shadow: 0px 10px 30px 10px #808080;
+}
+
+/* separamento das propriedades para ficar facil a leitura */
+
+.initial-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+/* Div`s para arrumar o texto principal da home */
+
+.initial-home h1 {
+    color: #f3f3f3;
+    font-weight: 500;
+}
+
+.initial-home h2 {
+    color: #E84426;
+    font-weight: 300;
+    padding-bottom: 2rem;
+}
+
+/* Div do input search */
+
+.search-movies {
+    display: flex;
+    align-items: center;
+    padding-bottom: 8rem;
+}
+
+/* id input */
+
+#movsearch {
+    width: 35rem;
+    height: 2.6rem;
+    margin-right: 1rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 3px 3px 6px 1px #000;
+    transition: all 0.4s;
+}
+
+/* id input hover para a animacao */
+
+#movsearch:hover {
+    box-shadow: 0px 0px 0px 0px #000;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+/* id input focus para tirar a borda quando estiver escrecendo */
+
+#movsearch:focus {
+    outline: none;
+}
+
+/* id botao ao lado do input */
+
+#searchbutton {
+    width: 6rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 8px;
+    color: #f3f3f3;
+    background-color: #E84426;
+    box-shadow: 3px 3px 6px 1px #000;
+    transition: all 0.3s;
+}
+
+/* id botao hover para animar ao clicar */
+
+#searchbutton:hover {
+    box-shadow: 0px 0px 0px 0px #000;
+    background-color: #f3f3f3;
+    color: #E84426;
+    border: 1px solid #E84426;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+/* id botao focus para tirar a borda ao clicar */
+
+#searchbutton:focus {
+    outline: none;
+}
+
+/* Div onde irá ficar alguns filmes*/
+
+.some-movies {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 2rem;
+}
+
+/* Arrumar title principal */
+
+.some-movies h1 {
+    color: #E84426;
+    text-shadow: 1px 1px 2px #000;
+    font-weight: 500;
+    padding-top: 2rem;
+}
+
+/* @media para deixar o site responsivo */
+
+@media(max-width: 700px) {
+    #movsearch {
+        width: 20rem;
+        height: 2rem;
+    }
+    #movsearch:hover {
+        -webkit-transform: scale(1.07);
+        transform: scale(1.07);
+    }
+    .search-movies {
+        padding-bottom: 8rem;
+    }
+    .initial-home {
+        width: 100%;
+        height: 40rem;
+    }
+    #searchbutton {
+        width: 5rem;
+        height: 2rem;
+    }
+    .initial-home h1 {
+        font-size: 1.6rem;
+    }
+    .initial-home h2 {
+        font-size: 1.3rem;
+    }
+}
+
+@media(max-width: 440px) {
+    #movsearch {
+        width: 20rem;
+        height: 2rem;
+        margin-right: 0rem;
+    }
+    #searchbutton {
+        width: 6rem;
+        height: 2rem;
+    }
+    .search-movies {
+        padding-bottom: 8rem;
+    }
+    .initial-home {
+        width: 100%;
+        height: 40rem;
+    }
+    .initial-home h1 {
+        font-size: 1.6rem;
+    }
+    .initial-home h2 {
+        font-size: 1.3rem;
+    }
+    .search-movies {
+        display: flex;
+        flex-direction: column;
+    }
+    .broken-line-responsive {
+        padding-top: 1rem;
+    }
+}
+
+@media(max-width: 395px) {
+    #movsearch {
+        width: 20rem;
+        height: 2rem;
+    }
+    #movsearch:hover {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    #searchbutton {
+        width: 6rem;
+        height: 2rem;
+    }
+    .initial-home h1 {
+        font-size: 1.6rem;
+    }
+    .initial-home h2 {
+        font-size: 1.1rem;
+    }
+    .search-movies {
+        display: flex;
+        flex-direction: column;
+    }
+    .broken-line-responsive {
+        padding-top: 1rem;
+    }
+}
+
+@media(max-width: 335px) {
+    #movsearch {
+        width: 15rem;
+        height: 2rem;
+    }
+    #searchbutton {
+        width: 5rem;
+        height: 2rem;
+    }
+    .initial-home h1 {
+        font-size: 1.3rem;
+    }
+    .initial-home h2 {
+        font-size: 1rem;
+    }
+    .search-movies {
+        display: flex;
+        flex-direction: column;
+    }
+    .broken-line-responsive {
+        padding-top: 1rem;
+    }
+}
