@@ -13,88 +13,87 @@
         <h1>Some movies...</h1>
         <div class="movies">
             <div class="responsive-align-one">
-                    <!-- filme demonstracao 1 -->
-                    <div class="movie" *ngIf="movies">
-                        <div class="box-movie">
-                            <img id="thumb" [src]="'https://image.tmdb.org/t/p/w500'+movies.poster_path" alt=""
-                                srcset="">
-                            <div class="align-informations">
-                                <div class="title-movies">
-                                    <h4>{{movies.title}}</h4>
-                                    <p>{{movies.release_date}}</p>
-                                </div>
-                                <div class="title-vote">
-                                    <p>{{movies.vote_average}}</p>
-                                </div>
+                <!-- filme demonstracao 1 -->
+                <div class="movie" *ngIf="movies">
+                    <div class="box-movie">
+                        <img id="thumb" [src]="'https://image.tmdb.org/t/p/w500'+movies.poster_path" alt="" srcset="">
+                        <div class="align-informations">
+                            <div class="title-movies">
+                                <h4>{{movies.title}}</h4>
+                                <p>{{movies.release_date}}</p>
                             </div>
-                        </div>
-                    </div>
-                    <!-- filme demonstracao 2 -->
-                    <div class="movie" *ngIf="moviesTwo">
-                        <div class="box-movie">
-                            <img id="thumb" [src]="'https://image.tmdb.org/t/p/w500'+moviesTwo.poster_path" alt=""
-                                srcset="">
-                            <div class="align-informations">
-                                <div class="title-movies">
-                                    <h4>{{moviesTwo.title}}</h4>
-                                    <p>{{moviesTwo.release_date}}</p>
-                                </div>
-                                <div class="title-vote">
-                                    <p>{{moviesTwo.vote_average}}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- filme demonstracao 3 -->
-                    <div class="movie" *ngIf="moviesThr">
-                        <div class="box-movie">
-                            <img id="thumb" [src]="'https://image.tmdb.org/t/p/w500'+moviesThr.poster_path" alt=""
-                                srcset="">
-                            <div class="align-informations">
-                                <div class="title-movies">
-                                    <h4>{{moviesThr.title}}</h4>
-                                    <p>{{moviesThr.release_date}}</p>
-                                </div>
-                                <div class="title-vote">
-                                    <p>{{moviesThr.vote_average}}</p>
-                                </div>
+                            <div class="title-vote">
+                                <p>{{movies.vote_average}}</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="responsive-align-two">
-                    <!-- filme demonstracao 4 -->
-                    <div class="movie" *ngIf="moviesFou">
-                        <div class="box-movie">
-                            <img id="thumb" [src]="'https://image.tmdb.org/t/p/w500'+moviesFou.poster_path" alt=""
-                                srcset="">
-                            <div class="align-informations">
-                                <div class="title-movies">
-                                    <h4>{{moviesFou.title}}</h4>
-                                    <p>{{moviesFou.release_date}}</p>
-                                </div>
-                                <div class="title-vote">
-                                    <p>{{moviesFou.vote_average}}</p>
-                                </div>
+                <!-- filme demonstracao 2 -->
+                <div class="movie" *ngIf="moviesTwo">
+                    <div class="box-movie">
+                        <img id="thumb" [src]="'https://image.tmdb.org/t/p/w500'+moviesTwo.poster_path" alt=""
+                            srcset="">
+                        <div class="align-informations">
+                            <div class="title-movies">
+                                <h4>{{moviesTwo.title}}</h4>
+                                <p>{{moviesTwo.release_date}}</p>
+                            </div>
+                            <div class="title-vote">
+                                <p>{{moviesTwo.vote_average}}</p>
                             </div>
                         </div>
                     </div>
-                    <!-- filme demonstracao 5 -->
-                    <div class="movie" *ngIf="moviesFiv">
-                        <div class="box-movie">
-                            <img id="thumb" [src]="'https://image.tmdb.org/t/p/w500'+moviesFiv.poster_path" alt=""
-                                srcset="">
-                            <div class="align-informations">
-                                <div class="title-movies">
-                                    <h4>{{moviesFiv.title}}</h4>
-                                    <p>{{moviesFiv.release_date}}</p>
-                                </div>
-                                <div class="title-vote">
-                                    <p>{{moviesFiv.vote_average}}</p>
-                                </div>
+                </div>
+                <!-- filme demonstracao 3 -->
+                <div class="movie" *ngIf="moviesThr">
+                    <div class="box-movie">
+                        <img id="thumb" [src]="'https://image.tmdb.org/t/p/w500'+moviesThr.poster_path" alt=""
+                            srcset="">
+                        <div class="align-informations">
+                            <div class="title-movies">
+                                <h4>{{moviesThr.title}}</h4>
+                                <p>{{moviesThr.release_date}}</p>
+                            </div>
+                            <div class="title-vote">
+                                <p>{{moviesThr.vote_average}}</p>
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
-        </div>
+            <div class="responsive-align-two">
+                <!-- filme demonstracao 4 -->
+                <div class="movie" *ngIf="moviesFou">
+                    <div class="box-movie">
+                        <img id="thumb" [src]="'https://image.tmdb.org/t/p/w500'+moviesFou.poster_path" alt=""
+                            srcset="">
+                        <div class="align-informations">
+                            <div class="title-movies">
+                                <h4>{{moviesFou.title}}</h4>
+                                <p>{{moviesFou.release_date}}</p>
+                            </div>
+                            <div class="title-vote">
+                                <p>{{moviesFou.vote_average}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- filme demonstracao 5 -->
+                <div class="movie" *ngIf="moviesFiv">
+                    <div class="box-movie">
+                        <img id="thumb" [src]="'https://image.tmdb.org/t/p/w500'+moviesFiv.poster_path" alt=""
+                            srcset="">
+                        <div class="align-informations">
+                            <div class="title-movies">
+                                <h4>{{moviesFiv.title}}</h4>
+                                <p>{{moviesFiv.release_date}}</p>
+                            </div>
+                            <div class="title-vote">
+                                <p>{{moviesFiv.vote_average}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
     </div>

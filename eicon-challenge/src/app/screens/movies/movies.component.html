@@ -5,9 +5,18 @@
             <div class="broken-line-responsive">
                 <input type="button" id="searchbutton" value="Search">
             </div>
-            <div class="informations">
-                
+        </div>
+        <div class="movie-information" *ngIf="sTitle, sImage">
+            <img id="thumb" [src]="'https://image.tmdb.org/t/p/w500'+sImage" alt="thumb_movies">
+            <div class="flex-container-movie">
+                <div class="flex-container-title">
+                    <h1>{{sTitle}}</h1>
+                    <p>Date: {{sRelease_date}}</p>
+                </div>
+                <script> document.getElementById("overview").maxLength = "10" </script>
+                <p id="overview">{{sOverview}}</p>
             </div>
         </div>
     </div>
+    <h1 id="warning-movie">Click on the image to see more about the movie</h1>
 </div>

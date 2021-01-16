@@ -10,7 +10,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MoviesComponent } from './screens/movies/movies.component';
 import { RouterModule } from '@angular/router';
 import { ApiComponent } from './screens/api/api.component';
-import { MoviesService } from './services/movies.service'; 
+import { MoviesService } from './services/movies.service';
+import { AboutMovieComponent } from './screens/about-movie/about-movie.component'; 
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MoviesService } from './services/movies.service';
     MenuComponent,
     FooterComponent,
     MoviesComponent,
-    ApiComponent
+    ApiComponent,
+    AboutMovieComponent
   ],
   imports: [
     BrowserModule, 
