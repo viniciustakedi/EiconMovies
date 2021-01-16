@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MoviesService } from 'src/app/movies.service';
+import { Movie } from 'src/app/services/movie';
+import { MoviesService } from 'src/app/services/movies.service';
 
 @Component({
   selector: 'app-home',
@@ -8,17 +9,41 @@ import { MoviesService } from 'src/app/movies.service';
 })
 export class HomeComponent implements OnInit {
 
-  movies: Array<any>
+  // Pode ser usar para tipagem tanto o Movie[] quando o any
+  movies: Movie[];
+  moviesTwo: any;
+  moviesThr: any;
+  moviesFou: any;
+  moviesFiv: Movie[];
 
-  constructor(private MoviesService: MoviesService) {}
+  constructor(private service: MoviesService) { }
 
   ngOnInit(): void {
-    this.listar();
-    console.log(this.listar)
+    // Filme estatico um
+    this.service.list().subscribe
+    (item => {
+        this.movies = item
+        console.log(item)
+    });
+    // Filme estatico dois
+    this.service.listTwo().subscribe
+    (item => {
+        this.moviesTwo = item
+    });
+    // Filme estatico tres
+    this.service.listThr().subscribe
+    (item => {
+        this.moviesThr = item
+    });
+    // Filme estatico quatro
+    this.service.listFou().subscribe
+    (item => {
+        this.moviesFou = item
+    });
+    // Filme estatico cinco
+    this.service.listFiv().subscribe
+    (item => {
+        this.moviesFiv = item
+    });
   }
-
-  listar() {
-    this.movies.listar().subscribe(item => this.movies = item);
-    }
-
 }

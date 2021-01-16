@@ -1,5 +1,4 @@
 /* Div initial home para inserir o background da home */
-
 .initial-home {
     width: 100%;
     height: 50rem;
@@ -11,7 +10,6 @@
 }
 
 /* separamento das propriedades para ficar facil a leitura */
-
 .initial-home {
     display: flex;
     justify-content: center;
@@ -21,7 +19,6 @@
 }
 
 /* Div`s para arrumar o texto principal da home */
-
 .initial-home h1 {
     color: #f3f3f3;
     font-weight: 500;
@@ -34,7 +31,6 @@
 }
 
 /* Div do input search */
-
 .search-movies {
     display: flex;
     align-items: center;
@@ -42,7 +38,6 @@
 }
 
 /* id input */
-
 #movsearch {
     width: 35rem;
     height: 2.6rem;
@@ -55,21 +50,19 @@
 }
 
 /* id input hover para a animacao */
-
 #movsearch:hover {
     box-shadow: 0px 0px 0px 0px #000;
+    margin-right: 4rem;
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
 }
 
 /* id input focus para tirar a borda quando estiver escrecendo */
-
 #movsearch:focus {
     outline: none;
 }
 
 /* id botao ao lado do input */
-
 #searchbutton {
     width: 6rem;
     height: 2.5rem;
@@ -88,8 +81,8 @@
     background-color: #f3f3f3;
     color: #E84426;
     border: 1px solid #E84426;
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
 }
 
 /* id botao focus para tirar a borda ao clicar */
@@ -99,26 +92,125 @@
 }
 
 /* Div onde irá ficar alguns filmes*/
-
 .some-movies {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-left: 2rem;
 }
 
 /* Arrumar title principal */
-
 .some-movies h1 {
-    color: #E84426;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #032541;
     text-shadow: 1px 1px 2px #000;
     font-weight: 500;
-    padding-top: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* padding na div movie para melhor visão */
+.movie{
+    padding-bottom: 6rem;
+}
+
+/* Alinhar filmes principais em ordem */
+.movies{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+/* ajuste de font dos titulos e datas */
+.title-movies{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+.title-movies h1{
+    font-weight: 200;
+    color: #032541;
+}
+.title-movies p{
+    font-weight: 300;
+    color: #032541;
+    padding-top: 0.2rem;
+}
+
+/* Alinhando informacoes principais na div */
+.align-informations{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+/* estilizando o circulo da nota media do filme */
+.title-vote{
+    font-weight: 300;
+    background-color: #1b0d5e;
+    border-radius: 90px;
+    color: #fff;
+    border: 3px solid #009985;
+    padding: 6px;
+}
+
+/* div para estilizar a caixa do filme */
+.box-movie{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 14rem;
+    border-radius: 8px;
+    background-color: #f3f3f3;
+    box-shadow: 4px 5px 10px 1px #808080;
+    transition: all 0.3s;
+    /* Para dar espacamento entre os filmes */
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+/* hover para animação */
+.box-movie:hover{   
+    -webkit-transform: scale(1.09);
+    transform: scale(1.09);
+}
+
+/* ajuste da image thumb */
+#thumb{
+    border-radius: 8px;
+    width: 14rem;
+    height: 20rem;
+}
+
+/* alinhamentos responsivos */
+.responsive-align-one{
+    display: flex;
+}
+
+.responsive-align-two{
+    display: flex;
 }
 
 /* @media para deixar o site responsivo */
 
-@media(max-width: 700px) {
+@media(max-width: 1295px){
+    .movies{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media(max-width: 890px){
+    #movsearch:hover {
+        box-shadow: 0px 0px 0px 0px #000;
+        margin-right: 2.5rem;
+        -webkit-transform: scale(1.04);
+        transform: scale(1.04);
+    }
+}
+@media(max-width: 830px) {
     #movsearch {
         width: 20rem;
         height: 2rem;
@@ -145,7 +237,21 @@
         font-size: 1.3rem;
     }
 }
-
+@media(max-width: 790px){
+    .responsive-align-one{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .responsive-align-two{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
 @media(max-width: 440px) {
     #movsearch {
         width: 20rem;
