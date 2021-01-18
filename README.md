@@ -1,21 +1,44 @@
-## :mount_fuji: Cosumindo API The movie DB com AngularJs | Consuming API The movie DB with AngularJs :mount_fuji:
- *Language:*
+## Cosumindo API The movie DB com AngularJs | Consuming API The movie DB with AngularJs :mount_fuji:
+ *Language/Idioma:*
  - [x] pt-BR
 -  [ ] en-US
 
-### O que é essa aplicação? 
+## O que é essa aplicação? 
 Essa aplicação é um website construido com o framework AngularJs, nossa plataforma se chama *Eicon Movie* e com ela é possível pesquisar por qualquer filme e ver os detalhes como:
-- Despesas(Budget)
-- Receita(Revenue)
-- Compania de produção(Production company).
+- Despesas(Budget) :dollar:
+- Receita(Revenue) :moneybag:
+- Compania de produção(Production company). :office:
 
 ### Idioma do site...
 Eu prezei por fazer um site em inglês por achar que combinaria melhor com o sistema, mas não se preocupe pois você pode pesquisar o filme em português que ele irá buscar e trazer o mesmo resultado.  
 
 ### Dificuldades!
-Eu sou super acostumado com o framework React, e aprender um outro framework relativamente novo que nem o Angular é uma tarefa difícil, porém, não ~~impossível~~. Então se meu código não estiver super bonitinho ou a forma de que fiz não estiver a mais eficiente pode ser por isso, desse modo, vou tentar ir aprimorando.
+Eu sou super acostumado com o framework React, e aprender um outro framework relativamente novo que nem o Angular é uma tarefa difícil, porém, não ~~impossível~~. Então se meu código não estiver super bonitinho ou a forma que fiz não estiver a mais eficiente pode ser por isso, desse modo, vou tentar ir aprimorando.
 
 ## Como baixar e fazer o projeto funcionar?
 Vamos dividir por passos então vamos lá!
-1. Clonar o repositório no git
+1. Baixar AngularJs em seu computador
+Vamos utilizar o instalador de pacotes NPM, abra um terminal/console/cmd e execute essa linha de comando:
+```
+npm install -g @angular/cli
+```
+Após baixar confira se o angular foi instalador com o seguinte comando:
+```
+ng --version
+````
+e se retornar algo como
+```
+Angular CLI: 11.0.7
+Node: 12.16.3
+OS: win32 x64
+```
+Então belezinha vamos para o próximo passo.
+
+2. Clonar o repositório no git	  
+Em um console/cmd em bash cole o seguinte comando: 
+```
+git clone https://github.com/viniciustakedi/EiconMovies.git
+```
+3. Entrar na pasta do projeto
+No mesmo console insira o comando cd para entrar na pasta raiz do projeto
 
