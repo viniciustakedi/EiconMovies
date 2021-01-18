@@ -9,8 +9,8 @@ Essa aplicação é um website construido com o framework AngularJs, nossa plata
 - Receita(Revenue) :moneybag:
 - Compania de produção(Production company). :office:
 
-- O website está com duas telas, uma home e uma para a busca de filmes,  ambas completamente **responsivas**.
-- Você pode pesquisar por qualquer filme e pode ver mais informações sobre clicando na imagem ou no título do mesmo.
+O website está com duas telas, uma home e uma para a busca de filmes,  ambas completamente **responsivas**.
+Você pode pesquisar por qualquer filme e pode ver mais informações sobre clicando na imagem ou no título do mesmo.
 
 ### Idioma do site...
 Eu prezei por fazer um site em inglês por achar que combinaria melhor com o sistema, mas não se preocupe pois você pode pesquisar o filme em português que ele irá buscar e trazer o mesmo resultado.  
