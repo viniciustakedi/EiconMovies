@@ -17,7 +17,7 @@ Eu sou super acostumado com o framework React, e aprender um outro framework rel
 
 ## Como baixar e fazer o projeto funcionar?
 Vamos dividir por passos então vamos lá!
-1. Baixar AngularJs em seu computador
+1. Baixar AngularJs em seu computador.
 Vamos utilizar o instalador de pacotes NPM, abra um terminal/console/cmd e execute essa linha de comando:
 ```
 npm install -g @angular/cli
@@ -34,11 +34,19 @@ OS: win32 x64
 ```
 ...então belezinha vamos para o próximo passo.
 
-2. Clonar o repositório no git	  
+2. Clonar o repositório no git. 
 Em um console/cmd em bash cole o seguinte comando: 
 ```
 git clone https://github.com/viniciustakedi/EiconMovies.git
 ```
-3. Entrar na pasta do projeto
-No mesmo console insira o comando cd para entrar na pasta raiz do projeto
+3. Entrar na pasta do projeto.
+No mesmo console insira o comando cd até você chegar na pasta **EiconMovies\eicon-challenge**:
+```
+cd EiconMovies/eicon-challenge/
+```
+4. Dar o comando para rodar o app no localhost.
+Quando você deu o ```git clone``` você deve ter achado que o arquivo está meio pesado ou algo assim não é mesmo? Eu já subi o projeto com todos os aquivos até o */node_modules*, justamente para ficar mais fácil a utilização do projeto. Então basta dar o comando no console para abrir o projeto em um localhost:
+```
+ng serve --o
+```
 
