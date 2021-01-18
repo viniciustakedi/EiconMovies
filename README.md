@@ -17,16 +17,16 @@ Você pode pesquisar por qualquer filme e pode ver mais informações clicando n
 Eu prezei por fazer um site em inglês por achar que combinaria melhor com o sistema, mas não se preocupe pois você pode pesquisar o filme em português que ele irá buscar e trazer o mesmo resultado.  
 
 ### Dificuldades!
-Eu sou super acostumado com o framework React, e aprender um outro framework relativamente novo que nem o Angular é uma tarefa difícil, porém, não ~~impossível~~, tive cinco dias para aprender e executar essa tarefa. Então se meu código não estiver super bonitinho ou a forma que fiz não estiver a mais eficiente pode ser por isso, desse modo, vou tentar ir aprimorando.
+Eu sou super acostumado com o framework React, e aprender um outro framework relativamente novo que nem o Angular é uma tarefa difícil, porém, não ~~impossível~~, tive cinco dias para aprender e executar essa tarefa, então, se meu código não estiver super bonitinho ou a forma que fiz não estiver a mais eficiente pode ser por isso, desse modo, vou tentar ir aprimorando.
 
 ## Como baixar e fazer o projeto funcionar?
-Vamos dividir o processo por 2 partes e cada parte terá seus passos então vamos lá!
+Vamos dividir o processo em 2 partes e cada parte terá seus passos então vamos lá!
 
 ### Primeira parte
 **Baixar o framework Angular, o NodeJs e este repositório do github.**
 1. Baixar NodeJs no seu computador.
-Para utilizar frameworks em JavaScript precisamos baixar o NodeJs caso você não tenha na sua máquina é só clicar no link... https://nodejs.org/dist/v15.6.0/node-v15.6.0-x64.msi ... após clicar ele já iniciará o download automático, para instalar não te segredo é só apertar *Next* quantas vezes for preciso e depois apertar *finish* e prontinho.
-Para conferir se foi instalado corretamente abra o console/terminal/cmd e escreve/cole essa linha de comando...
+Para utilizar frameworks em JavaScript precisamos baixar o NodeJs, caso você não tenha na sua máquina é só clicar no link... https://nodejs.org/dist/v15.6.0/node-v15.6.0-x64.msi ... após clicar ele já iniciará o download automático, para instalar não tem segredo é só apertar *Next* quantas vezes for preciso e depois apertar *finish* e prontinho.
+Para conferir se foi instalado corretamente abra o console/terminal/cmd e escreva/cole essa linha de comando...
 ```
 node --version
 ``` 
@@ -67,36 +67,36 @@ cd EiconMovies/eicon-challenge/
 ```
 
 5. Dar o comando para rodar o app no localhost.
-Quando você deu o ```git clone``` você deve ter achado que o arquivo está meio pesado ou algo assim não é mesmo? Eu já subi o projeto com todos os aquivos até o */node_modules*, justamente para ficar mais fácil a utilização do projeto. Então basta dar o comando no console para abrir o projeto em um localhost:
+Quando você deu o ```git clone``` você deve ter achado que o repositório está meio pesado ou algo assim não é mesmo? Eu já subi o projeto com todos os aquivos até o */node_modules*, justamente para ficar mais fácil a utilização do projeto. Então basta dar o comando no console para abrir o projeto em um localhost:
 ```
 ng serve --o
 ```
-...com isso o projeto deverá abrir em seu navegador padrão caso não abra copie o link do terminal, que deve ser parecido com esse aqui: ```http://localhost:4200/```
+...com isso o projeto deverá abrir em seu navegador padrão, caso não abra copie o link do terminal, que deve ser parecido com esse aqui: ```http://localhost:4200/```
 
 ### Segunda parte
-**Criar conta no The Movie DB para ter acesso ao banco de dados, e trocar as chaves de api(api_key (v3 auth)) na aplicação usando vscode ou qualquer editor de texto, caso já tenha conta no TMDb e tenha uma api key (v3 auth) pule para o passo 7**.
-1. Criar conta no The movie db. Entre no site https://www.themoviedb.org/ e clique em **_Join TMDb** para se cadastrar no site.
+**Criar conta no The Movie DB para ter acesso ao banco de dados, e trocar as chaves de api (api_key (v3 auth)) na aplicação usando vscode ou qualquer editor de texto, caso já tenha conta no TMDb e tenha uma api key (v3 auth) pule para o passo 7**.
+1. Criar conta no The movie db. Entre no site https://www.themoviedb.org/ e clique em **Join TMDb** para se cadastrar no site.
 2. Crie sua conta e confirme no **Email**.
-3. Faça o login no site clicando em **_login**.
-4. Após logado, no canto superior direito(no menu) clique na sua **_foto/letra de perfil** e vá na opção de **configurações ou settings** 
-5. No menu lateral escrito **_definições ou setting** vá em **API**.
+3. Faça o login no site clicando em **Login**.
+4. Após logado, no canto superior direito(no menu) clique na sua **foto/letra de perfil** e vá na opção de **configurações ou settings** 
+5. No menu lateral escrito **definições ou setting** vá em **API**.
 6. Crie uma chave de API, indo em **Directory** e depois em **Create application** você deverá criar um aplicativo qualquer, isso só é necessário para pegar uma chave de api (v3 auth).
-7. Copie a sua chave de API(v3 auth) localizada na parte de **Overview**(Página do passo 5).
-8. Abra o código no em algum editor de texto e vá no arquivo movies.service.ts localizado em...
+7. Copie a sua chave de API (v3 auth) localizada na parte de **Overview** (Página do passo 5).
+8. Abra o código em algum editor de texto e vá no arquivo **movies.service.ts** localizado em...
 ```
 src/app/services/movies.service.ts
 ```
-... na linha 11 altere a string api_key = ''; para a sua chave de api, tem um comentário indicando.
+... na linha 11 altere a **string api_key = '';** para a sua chave de api, tem um comentário indicando.
 ```
 10  //ALTERE AQUI A API KEY (v3 AUTH)
 11  api_key = '7b9cf534a88ff61e...'; //três pontos só para não mostrar minha chave
 ```
 
-9. Última alteração. Agora vá no arquivo movies.component.ts localizado em...
+9. Última alteração. Agora vá no arquivo **movies.component.ts** localizado em...
 ```
 src/app/screens/movies/movies.component.ts
 ```
-... na linha 13 altere a string api_key = ''; para a sua chave de api, tem um comentário indicando.
+... na linha 13 altere a **string api_key = '';** para a sua chave de api, tem um comentário indicando.
 ```
 12  //ALTERE AQUI A API KEY (v3 AUTH)
 13  api_key = '7b9cf534a88ff61e...'; //três pontos só para não mostrar minha chave
@@ -112,8 +112,12 @@ ng serve --o
 Aqui estão alguns bugs que eu percebi durante o desenvolvimento que serão consertados em breve.
 - Array que retorna menos de 2 filmes na busca impede a visualização detalhada e o site precisa ser recarregado.
 - Poucos filmes estão bugando quando é solicitado para ver mais informações sobre eles, podendo:
+
 Não abrir o modal
+
 Ficar em Tela preta com opacidade
+
 Não poder ver mais informações de outros filmes...necessário recarrecar a página
+
 Um exeplo deles é o: **Batman: Soul of the Dragon**.
   
