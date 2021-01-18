@@ -22,17 +22,17 @@ Vamos utilizar o instalador de pacotes NPM, abra um terminal/console/cmd e execu
 ```
 npm install -g @angular/cli
 ```
-Após baixar confira se o angular foi instalador com o seguinte comando:
+Após baixar confira se o Angular foi instalador com o seguinte comando:
 ```
 ng --version
 ````
-e se retornar algo como
+e se retornar algo como...
 ```
 Angular CLI: 11.0.7
 Node: 12.16.3
 OS: win32 x64
 ```
-Então belezinha vamos para o próximo passo.
+...então belezinha vamos para o próximo passo.
 
 2. Clonar o repositório no git	  
 Em um console/cmd em bash cole o seguinte comando: 
