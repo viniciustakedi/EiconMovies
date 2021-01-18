@@ -120,4 +120,12 @@ Ficar em Tela preta com opacidade
 Não poder ver mais informações de outros filmes...necessário recarrecar a página
 
 Um exeplo deles é o: **Batman: Soul of the Dragon**.
+
+
+## Recomendações de pesquisa:
+- Avengers
+- Jumanji
+- Cars (carros animação pixar)
+
+### Teste a versão responsiva está bem legal.
   
