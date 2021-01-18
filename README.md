@@ -21,7 +21,7 @@ Eu sou super acostumado com o framework React, e aprender um outro framework rel
 ## Como baixar e fazer o projeto funcionar?
 Vamos dividir o processo por 2 partes e cada parte terá seus passos então vamos lá!
 
-# Primeira parte
+### Primeira parte
 **Baixar o framework Angular, o NodeJs e este repositório do github.**
 1. Baixar NodeJs no seu computador.
 Para utilizar frameworks em JavaScript precisamos baixar o NodeJs caso você não tenha na sua máquina é só clicar no link... https://nodejs.org/dist/v15.6.0/node-v15.6.0-x64.msi ... após clicar ele já iniciará o download automático, para instalar não te segredo é só apertar *Next* quantas vezes for preciso e depois apertar *finish* e prontinho.
@@ -72,7 +72,7 @@ ng serve --o
 ```
 ...com isso o projeto deverá abrir em seu navegador padrão caso não abra copie o link do terminal, que deve ser parecido com esse aqui: ```http://localhost:4200/```
 
-# Segunda parte
+### Segunda parte
 **Criar conta no The Movie DB para ter acesso ao banco de dados, e trocar as chaves de api(api_key (v3 auth)) na aplicação usando vscode ou qualquer editor de texto, caso já tenha conta no TMDb e tenha uma api key (v3 auth) pule para o passo 7**.
 1. Criar conta no The movie db. Entre no site https://www.themoviedb.org/ e clique em **_Join TMDb** para se cadastrar no site.
 2. Crie sua conta e confirme no **Email**.
@@ -111,8 +111,8 @@ ng serve --o
 Aqui estão alguns bugs que eu percebi durante o desenvolvimento que serão consertados em breve.
 - Array que retorna menos de 2 filmes na busca impede a visualização detalhada e o site precisa ser recarregado.
 - Poucos filmes estão bugando quando é solicitado para ver mais informações sobre eles, podendo:
- - Não abrir o modal
- - Ficar em Tela preta com opacidade
- - Não poder ver mais informações de outros filmes...necessário recarrecar a página
- 
-- 
+Não abrir o modal
+Ficar em Tela preta com opacidade
+Não poder ver mais informações de outros filmes...necessário recarrecar a página
+Um exeplo deles é o: **Batman: Soul of the Dragon**.
+  
