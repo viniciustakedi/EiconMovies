@@ -1,22 +1,215 @@
 <div class="container-home">
     <div class="initial-home">
         <div class="search-movies">
-            <input type="search" name="movsearch" placeholder="Search a movie" id="movsearch">
-            <div class="broken-line-responsive">
-                <input type="button" id="searchbutton" value="Search">
-            </div>
+            <input [formControl]="queryField" type="text" name="movsearch" placeholder="Search a movie"
+                id="movsearch" />
+            <input (click)="onSearch();onClear()" type="button" id="searchbutton" value="Search" />
         </div>
-        <div class="movie-information" *ngIf="sTitle, sImage">
-            <img id="thumb" [src]="'https://image.tmdb.org/t/p/w500'+sImage" alt="thumb_movies">
-            <div class="flex-container-movie">
-                <div class="flex-container-title">
-                    <h1>{{sTitle}}</h1>
-                    <p>Date: {{sRelease_date}}</p>
+        <!-- Movie result one -->
+        <div class="padding-movies">
+            <div class="movie-information" *ngIf="sTitle, sImage">
+                <img id="thumb" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                    [src]="'https://image.tmdb.org/t/p/w500'+sImage" alt="thumb_not_found" />
+                <div class="flex-container-movie">
+                    <div class="flex-container-title">
+                        <h1 data-bs-toggle="modal" data-bs-target="#staticBackdrop">{{sTitle}}</h1>
+                        <p>Date: {{sRelease_date}}</p>
+                    </div>
+                    <p id="overview">{{sOverview}}</p>
+                    <div class="title-vote">
+                        <p id="title-language-p">{{sOriginal_language}}</p>
+                        <p id="title-vote-p">{{sVote_average}}</p>
+                    </div>
                 </div>
-                <script> document.getElementById("overview").maxLength = "10" </script>
-                <p id="overview">{{sOverview}}</p>
             </div>
         </div>
+        <!-- Modal one -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-lg" *ngIf="budget_modal, sTitle">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">{{sTitle}}</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="align-informations">
+                            <div class="header-about">
+                                <img id="thumb-modal" [src]="'https://image.tmdb.org/t/p/w500'+sImage"
+                                    alt="thumb_movie">
+                                <img id="thumb-modal-backdrop" [src]="'https://image.tmdb.org/t/p/w500'+sBackdrop"
+                                    alt="thumb_movie">
+                                <div class="display-info">
+                                    <h3>{{sTitle}}</h3>
+                                    <div class="small-info">
+                                        <p>{{sRelease_date}} - </p>
+                                        <p>{{genres_modal}} - </p>
+                                        <p>{{runtime_modal}} Minutes</p>
+                                    </div>
+                                    <div class="title-vote">
+                                        <p id="title-language-p">{{sOriginal_language}}</p>
+                                        <p id="title-vote-p">{{sVote_average}}</p>
+                                    </div>
+                                    <p>Company: {{production_company_modal}}</p>
+                                    <p>Country: {{origin_country_modal}}</p>
+                                    <p>Tagline: {{tagline_modal}}</p>
+                                    <h3 id="sub-titles">Values: </h3>
+                                    <p>Budget: $ {{budget_modal}}</p>
+                                    <p>Revenue: $ {{revenue_modal}}</p>
+
+                                    <h3 id="sub-titles">Others informations: </h3>
+                                    <p>Popularity: {{popularity_modal}}</p>
+                                    <p>Status: {{status_modal}}</p>
+
+                                    <h3 id="sub-titles">Overview: </h3>
+                                    <p id="text-justify">{{sOverview}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal one -->
+        <!-- Movie result two -->
+        <div class="padding-movies">
+            <div class="movie-information" *ngIf="sTitleTwo, sImageTwo">
+                <img id="thumb" data-bs-toggle="modal" data-bs-target="#staticBackdrop-2"
+                    [src]="'https://image.tmdb.org/t/p/w500'+sImageTwo" alt="thumb_not_found" />
+                <div class="flex-container-movie">
+                    <div class="flex-container-title">
+                        <h1 data-bs-toggle="modal" data-bs-target="#staticBackdrop-2">{{sTitleTwo}}</h1>
+                        <p>Date: {{sRelease_dateTwo}}</p>
+                    </div>
+                    <p id="overview">{{sOverviewTwo}}</p>
+                    <div class="title-vote">
+                        <p id="title-language-p">{{sOriginal_languageTwo}}</p>
+                        <p id="title-vote-p">{{sVote_averageTwo}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal two -->
+        <div class="modal fade" id="staticBackdrop-2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-lg" *ngIf="budget_modal_Tw, sTitleTwo">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">{{sTitleTwo}}</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="align-informations">
+                            <div class="header-about">
+                                <img id="thumb-modal" [src]="'https://image.tmdb.org/t/p/w500'+sImageTwo"
+                                    alt="thumb_movie">
+                                    <img id="thumb-modal-backdrop" [src]="'https://image.tmdb.org/t/p/w500'+sBackdropTwo"
+                                    alt="thumb_movie">
+                                <div class="display-info">
+                                    <h3>{{sTitleTwo}}</h3>
+                                    <div class="small-info">
+                                        <p>{{sRelease_dateTwo}} - </p>
+                                        <p>{{genres_modal_Tw}} - </p>
+                                        <p>{{runtime_modal_Tw}} Minutes</p>
+                                    </div>
+                                    <div class="title-vote">
+                                        <p id="title-language-p">{{sOriginal_languageTwo}}</p>
+                                        <p id="title-vote-p">{{sVote_averageTwo}}</p>
+                                    </div>
+                                    <p>Company: {{production_company_modal_Tw}}</p>
+                                    <p>Country: {{origin_country_modal_Tw}}</p>
+                                    <p>Tagline: {{tagline_modal_Tw}}</p>
+                                    <h3 id="sub-titles">Values:</h3>
+                                    <p>Budget: $ {{budget_modal_Tw}}</p>
+                                    <p>Revenue: $ {{revenue_modal_Tw}}</p>
+
+                                    <h3 id="sub-titles">Others informations: </h3>
+                                    <p>Popularity: {{popularity_modal_Tw}}</p>
+                                    <p>Status: {{status_modal_Tw}}</p>
+
+                                    <h3 id="sub-titles">Overview: </h3>
+                                    <p id="text-justify">{{sOverviewTwo}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal Two -->
+        <!-- Movie result three -->
+        <div class="padding-movies">
+            <div class="movie-information" *ngIf="sTitleThr, sImageThr">
+                <img id="thumb" data-bs-toggle="modal" data-bs-target="#staticBackdrop-3"
+                    [src]="'https://image.tmdb.org/t/p/w500'+sImageThr" alt="thumb_not_found" />
+                <div class="flex-container-movie">
+                    <div class="flex-container-title">
+                        <h1 data-bs-toggle="modal" data-bs-target="#staticBackdrop-3">{{sTitleThr}}</h1>
+                        <p>Date: {{sRelease_dateThr}}</p>
+                    </div>
+                    <p id="overview">{{sOverviewThr}}</p>
+                    <div class="title-vote">
+                        <p id="title-language-p">{{sOriginal_languageThr}}</p>
+                        <p id="title-vote-p">{{sVote_averageThr}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal three -->
+        <div class="modal fade" id="staticBackdrop-3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-lg" *ngIf="budget_modal_Th, sTitleThr">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">{{sTitleThr}}</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="align-informations">
+                            <div class="header-about">
+                                <img id="thumb-modal" [src]="'https://image.tmdb.org/t/p/w500'+sImageThr"
+                                    alt="thumb_movie">
+                                    <img id="thumb-modal-backdrop" [src]="'https://image.tmdb.org/t/p/w500'+sBackdropThr"
+                                    alt="thumb_movie">
+                                <div class="display-info">
+                                    <h3>{{sTitleThr}}</h3>
+                                    <div class="small-info">
+                                        <p>{{sRelease_dateThr}} - </p>
+                                        <p>{{genres_modal_Th}} - </p>
+                                        <p>{{runtime_modal_Th}} Minutes</p>
+                                    </div>
+                                    <div class="title-vote">
+                                        <p id="title-language-p">{{sOriginal_languageThr}}</p>
+                                        <p id="title-vote-p">{{sVote_averageThr}}</p>
+                                    </div>
+                                    <p>Company: {{production_company_modal_Th}}</p>
+                                    <p>Country: {{origin_country_modal_Th}}</p>
+                                    <p>Tagline: {{tagline_modal_Th}}</p>
+                                    <h3 id="sub-titles">Values:</h3>
+                                    <p>Budget: $ {{budget_modal_Th}}</p>
+                                    <p>Revenue: $ {{revenue_modal_Th}}</p>
+
+                                    <h3 id="sub-titles">Others informations: </h3>
+                                    <p>Popularity: {{popularity_modal_Th}}</p>
+                                    <p>Status: {{status_modal_Th}}</p>
+
+                                    <h3 id="sub-titles">Overview: </h3>
+                                    <p id="text-justify">{{sOverviewThr}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal Two -->
+        <h1 id="warning-movie">search for movies in english or portuguese</h1>
+        <p id="warning-movie-p">Click on the image or title to see more about the movie</p>
     </div>
-    <h1 id="warning-movie">Click on the image to see more about the movie</h1>
 </div>

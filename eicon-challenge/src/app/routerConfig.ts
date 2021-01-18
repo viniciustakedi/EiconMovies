@@ -6,19 +6,12 @@ import { ApiComponent } from './screens/api/api.component';
 
 const appRoutes: Routes = [
     {
-        path: 'home',
+        path: 'home', pathMatch: 'full', redirectTo: 'home'
+    },
+    {
+        path: '',
         component: HomeComponent
     },
-    //     //Posicao na array criada caso o usuario tente tirar o home do link
-    // {
-    //     path: '/',
-    //     component: HomeComponent 
-    // },
-    // {
-    //     // Posicao na array criada caso o usuario tente tirar o home do link
-    //     path: '',
-    //     component: HomeComponent
-    // },
     {
         path: 'movies',
         component: MoviesComponent

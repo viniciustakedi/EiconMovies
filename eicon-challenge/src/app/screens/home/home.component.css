@@ -37,26 +37,6 @@
     padding-bottom: 8rem;
 }
 
-/* id input */
-#movsearch {
-    width: 35rem;
-    height: 2.6rem;
-    margin-right: 1rem;
-    padding: 0.5rem;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 3px 3px 6px 1px #000;
-    transition: all 0.4s;
-}
-
-/* id input hover para a animacao */
-#movsearch:hover {
-    box-shadow: 0px 0px 0px 0px #000;
-    margin-right: 4rem;
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-}
-
 /* id input focus para tirar a borda quando estiver escrecendo */
 #movsearch:focus {
     outline: none;
@@ -64,8 +44,9 @@
 
 /* id botao ao lado do input */
 #searchbutton {
-    width: 6rem;
+    width: 12rem;
     height: 2.5rem;
+    padding: 0.5rem;
     border: none;
     border-radius: 8px;
     color: #f3f3f3;
@@ -81,8 +62,8 @@
     background-color: #f3f3f3;
     color: #E84426;
     border: 1px solid #E84426;
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
 }
 
 /* id botao focus para tirar a borda ao clicar */
@@ -227,8 +208,9 @@
         height: 40rem;
     }
     #searchbutton {
-        width: 5rem;
-        height: 2rem;
+        width: 10rem;
+        height: 2.3rem;
+        padding: 0.5rem;
     }
     .initial-home h1 {
         font-size: 1.6rem;
@@ -259,8 +241,9 @@
         margin-right: 0rem;
     }
     #searchbutton {
-        width: 6rem;
-        height: 2rem;
+        width: 10rem;
+        height: 2.3rem;
+        padding: 0.5rem;
     }
     .search-movies {
         padding-bottom: 8rem;
@@ -294,8 +277,9 @@
         transform: scale(1);
     }
     #searchbutton {
-        width: 6rem;
-        height: 2rem;
+        width: 10rem;
+        height: 2.3rem;
+        padding: 0.5rem;
     }
     .initial-home h1 {
         font-size: 1.6rem;
@@ -318,8 +302,9 @@
         height: 2rem;
     }
     #searchbutton {
-        width: 5rem;
-        height: 2rem;
+        width: 10rem;
+        height: 2.3rem;
+        padding: 0.5rem;
     }
     .initial-home h1 {
         font-size: 1.3rem;

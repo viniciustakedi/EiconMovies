@@ -23,7 +23,6 @@ export class HomeComponent implements OnInit {
     this.service.list().subscribe
     (item => {
         this.movies = item
-        console.log(item)
     });
     // Filme estatico dois
     this.service.listTwo().subscribe

@@ -3,9 +3,8 @@
         <h1>Welcome to Eicon Movies</h1>
         <h2>Find your favorite movie or a new movie...</h2>
         <div class="search-movies">
-            <input type="search" name="movsearch" placeholder="Search a movie" id="movsearch">
             <div class="broken-line-responsive">
-                <input type="button" id="searchbutton" value="Search">
+                <a routerLink="movies"><input type="button" id="searchbutton" value="Search for a movie..."></a>
             </div>
         </div>
     </div>
@@ -97,3 +96,4 @@
             </div>
         </div>  
     </div>
+    <router-outlet></router-outlet>

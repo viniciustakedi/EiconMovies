@@ -25,7 +25,6 @@
 }
 
 /* id input hover para a animacao */
-
 #movsearch:hover {
     box-shadow: 0px 0px 0px 0px #000;
     margin-right: 4rem;
@@ -35,13 +34,11 @@
 }
 
 /* id input focus para tirar a borda quando estiver escrecendo */
-
 #movsearch:focus {
     outline: none;
 }
 
 /* id botao ao lado do input */
-
 #searchbutton {
     width: 6rem;
     height: 2.5rem;
@@ -54,7 +51,6 @@
 }
 
 /* id botao hover para animar ao clicar */
-
 #searchbutton:hover {
     box-shadow: 0px 0px 0px 0px #000;
     background-color: #f3f3f3;
@@ -65,19 +61,17 @@
 }
 
 /* id botao focus para tirar a borda ao clicar */
-
 #searchbutton:focus {
     outline: none;
 }
 
 /* div das informações do filme desejado */
-.informations h1{
+.informations h1 {
     font-size: 3rem;
 }
 
-
 /* estilizaçao da div do filme pesquisado */
-.movie-information{
+.movie-information {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,35 +83,42 @@
     box-shadow: 2px 2px 10px 1px #808080;
 }
 
-.flex-container-movie{
+/* padding nos filmes listados */
+.padding-movies {
+    padding-bottom: 1.5rem;
+}
+
+.flex-container-movie {
     display: flex;
     flex-direction: column;
 }
 
-.flex-container-movie p{
-    font-size: 0.8;
+.flex-container-movie p {
+    font-size: 0.9rem;
     font-weight: 300;
     margin-right: 1rem;
 }
 
-.flex-container-title h1{
+.flex-container-title h1 {
     font-weight: 400;
     font-size: 1.5rem;
+    margin-right: 1rem;
 }
-.flex-container-title p{
+
+.flex-container-title p {
     font-weight: 300;
     font-size: 1rem;
     padding-bottom: 0.5rem;
 }
 
-#thumb{
+#thumb {
     width: 12rem;
     height: 20rem;
     border-radius: 8px;
     margin-right: 1rem;
 }
 
-#warning-movie{
+#warning-movie {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -125,4 +126,281 @@
     font-weight: 300;
     font-size: 1.6rem;
     opacity: 0.4;
+}
+
+#warning-movie-p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    font-size: 1.2rem;
+    opacity: 0.6;
+}
+
+/* estilizando o circulo da nota media do filme e linguagens */
+.title-vote {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: baseline;
+}
+
+#title-vote-p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    background-color: #1b0d5e;
+    border-radius: 90px;
+    font-size: 0.8rem;
+    width: 2rem;
+    height: 2rem;
+    color: #fff;
+    border: 3px solid #009985;
+}
+
+#title-language-p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    background-color: #009985;
+    border-radius: 90px;
+    font-size: 0.8rem;
+    width: 2rem;
+    height: 2rem;
+    color: #fff;
+    border: 3px solid #1b0d5e;
+}
+
+/* Alinhamento e estilização de conteudos do modal */
+.header-about{
+    display: flex;
+}
+/* alinnhando titulo com informacoes */
+.display-info{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+}
+
+.display-info h3{
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.display-info p {
+    font-weight: 300;
+    font-size: 1.1rem;
+    margin-left: 0.5rem;
+}
+/* alinhamento das informacoes */
+.small-info{
+    display: flex;
+    align-items: center;
+}
+/* espaçamento entre as informacoes */
+.small-info p{
+    font-weight: 400;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}
+/* tamanho da img do modal */
+#thumb-modal{
+    width: 25rem;
+    height: 52rem;
+    margin-right: 0.4rem;
+}
+
+#sub-titles{
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding-top: 1rem;
+}
+/* Alinha texto do overview */
+#text-justify{
+    text-align: justify;
+}
+/* display block para impedir visualizacao da imagem */
+#thumb-modal-backdrop{
+    display: none;
+}
+
+
+/* Começo responsividade, @media para deixar tela responsiva */
+
+@media(max-width: 992px){
+    /* Alinhamento e estilização de conteudos do modal */
+.header-about{
+    display: flex;
+    flex-direction: column;
+}
+/* tamanho da img do modal */
+#thumb-modal{
+    display: none;
+}
+#thumb-modal-backdrop{
+    display: flex;
+    height: 100%;
+}
+/* Alinha texto do overview */
+#text-justify{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    text-align: justify;
+}
+}
+@media(max-width: 900px) {
+    #movsearch:hover {
+        box-shadow: 1px 1px 9px 1px #d3d3d3;
+        margin-right: 1rem;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@media(max-width: 750px) {
+    .movie-information {
+        text-align: left;
+        width: 30rem;
+        height: 20rem;
+    }
+    #thumb {
+        width: 10rem;
+        height: 20rem;
+        border-radius: 8px;
+        margin-right: 0.6rem;
+    }
+    #overview {
+        font-weight: 400;
+        font-size: 0.8rem;
+    }
+    .flex-container-title h1 {
+        font-weight: 400;
+        font-size: 1.2rem;
+        margin-right: 1rem;
+    }
+    
+    .flex-container-title p {
+        font-weight: 300;
+        font-size: 0.7rem;
+        padding-bottom: 0.2rem;
+    }
+    #movsearch {
+        width: 15rem;
+        height: 2.6rem;
+    }
+    #searchbutton {
+        width: 5.5rem;
+        height: 2.5rem;
+    }
+}
+@media(max-width: 495px) {
+    .movie-information {
+        text-align: left;
+        width: 20rem;
+        height: 18rem;
+    }
+    #thumb {
+        width: 9rem;
+        height: 18rem;
+        border-radius: 8px;
+        margin-right: 0.4rem;
+    }
+    #overview {
+        font-weight: 500;
+        font-size: 0.6rem;
+    }
+    #movsearch {
+        width: 12rem;
+        height: 2.3rem;
+    }
+    #searchbutton {
+        width: 5rem;
+        height: 2.2rem;
+    }
+    /* titulo do filme e data */
+    .flex-container-title h1 {
+        font-weight: 400;
+        font-size: 1rem;
+        margin-right: 1rem;
+    }
+    
+    .flex-container-title p {
+        font-weight: 300;
+        font-size: 0.7rem;
+        padding-bottom: 0.2rem;
+    }
+    /* rating do filme e idioma */
+    #title-vote-p {
+        font-weight: 300;
+        background-color: #1b0d5e;
+        border-radius: 90px;
+        font-size: 0.7rem;
+        padding: 0.2rem;
+        width: 1.3rem;
+        height: 1.3rem;
+        color: #fff;
+        border: 1px solid #009985;
+    }
+    
+    #title-language-p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 300;
+        background-color: #f8f532;
+        border-radius: 90px;
+        font-size: 0.7rem;
+        padding: 0.2rem;
+        width: 1.3rem;
+        height: 1.3rem;
+        color: #000;
+        border: 1px solid #1b0d5e;
+    }
+    /* backdrop modal */
+    #thumb-modal-backdrop{
+        display: flex;
+        height: 15rem;
+    }
+}
+@media(max-width: 330px){
+    .movie-information {
+        text-align: left;
+        width: 15rem;
+        height: 10rem;
+    }
+    #thumb {
+        width: 5rem;
+        height: 10rem;
+        border-radius: 8px;
+        margin-right: 0.4rem;
+    }
+    #overview {
+        font-size: 0rem;
+    }
+    #movsearch {
+        width: 10rem;
+        height: 2.3rem;
+    }
+    #searchbutton {
+        width: 4rem;
+        height: 2.3rem;
+    }
+    #icon-clear{
+        width: 1.2rem;
+        height: 1.2rem;
+        margin-left: 1rem;
+    }
+    #thumb-modal-backdrop{
+        display: flex;
+        height: 12.5rem;
+    }
+}
+@media(max-width: 290px){
+    .small-info p{
+        font-weight: 400;
+        font-size: 0.9rem;
+    }
 }

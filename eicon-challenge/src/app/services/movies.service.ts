@@ -7,14 +7,14 @@ import { Movie } from './movie';
 })
 export class MoviesService {
 
-  // Caso queira testar a aplicação é necessário trocar essa variável da Api token
-  apiToken = '7b9cf534a88ff61e918279f09548b7c4';
+  //ALTERE AQUI A API KEY (v3 AUTH)
+  api_key = '7b9cf534a88ff61e918279f09548b7c4';
 
-  url = 'http://api.themoviedb.org/3/movie/550?api_key='+this.apiToken;
-  urlTwo = 'http://api.themoviedb.org/3/movie/508442?api_key='+this.apiToken;
-  urlThr = 'http://api.themoviedb.org/3/movie/129?api_key='+this.apiToken;
-  urlFou = 'http://api.themoviedb.org/3/movie/354912?api_key='+this.apiToken;
-  urlFiv = 'http://api.themoviedb.org/3/movie/337401?api_key='+this.apiToken;
+  url = 'http://api.themoviedb.org/3/movie/299534?api_key='+this.api_key;
+  urlTwo = 'http://api.themoviedb.org/3/movie/508442?api_key='+this.api_key;
+  urlThr = 'http://api.themoviedb.org/3/movie/129?api_key='+this.api_key;
+  urlFou = 'http://api.themoviedb.org/3/movie/354912?api_key='+this.api_key;
+  urlFiv = 'http://api.themoviedb.org/3/movie/337401?api_key='+this.api_key;
 
 
   constructor(private http: HttpClient) { }

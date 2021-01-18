@@ -1,17 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import appRoutes from './routerConfig';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import appRoutes from './routerConfig';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './screens/home/home.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MoviesComponent } from './screens/movies/movies.component';
-import { RouterModule } from '@angular/router';
 import { ApiComponent } from './screens/api/api.component';
 import { MoviesService } from './services/movies.service';
-import { AboutMovieComponent } from './screens/about-movie/about-movie.component'; 
 
 @NgModule({
   declarations: [
@@ -20,13 +20,14 @@ import { AboutMovieComponent } from './screens/about-movie/about-movie.component
     MenuComponent,
     FooterComponent,
     MoviesComponent,
-    ApiComponent,
-    AboutMovieComponent
+    ApiComponent
   ],
   imports: [
     BrowserModule, 
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule,
+    RouterModule.forRoot(appRoutes),
+    ReactiveFormsModule
   ],
   providers: [MoviesService, HttpClient],
   bootstrap: [AppComponent]
