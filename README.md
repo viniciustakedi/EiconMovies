@@ -88,8 +88,8 @@ src/app/services/movies.service.ts
 ```
 ... na linha 11 altere a **string api_key = '';** para a sua chave de api, tem um comentário indicando.
 ```
-10  //ALTERE AQUI A API KEY (v3 AUTH)
-11  api_key = '7b9cf534a88ff61e...'; //três pontos só para não mostrar minha chave
+10 -  //ALTERE AQUI A API KEY (v3 AUTH)
+11 -  api_key = '7b9cf534a88ff61e...'; //três pontos só para não mostrar minha chave
 ```
 
 9. Última alteração. Agora vá no arquivo **movies.component.ts** localizado em...
@@ -98,8 +98,8 @@ src/app/screens/movies/movies.component.ts
 ```
 ... na linha 13 altere a **string api_key = '';** para a sua chave de api, tem um comentário indicando.
 ```
-12  //ALTERE AQUI A API KEY (v3 AUTH)
-13  api_key = '7b9cf534a88ff61e...'; //três pontos só para não mostrar minha chave
+13 -  //ALTERE AQUI A API KEY (v3 AUTH)
+14 -  api_key = '7b9cf534a88ff61e...'; //três pontos só para não mostrar minha chave
 ```
 
 10. Caso tenha fechado ou é necessário reiniciar a aplicação execute o comando...
