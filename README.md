@@ -1,7 +1,6 @@
 ## Cosumindo API The movie DB com AngularJs | Consuming API The movie DB with AngularJs
  *Language/Idioma:*
- - [x] pt-BR
--  [ ] en-US _read.me in english soon_
+cen-US _read.me in english soon_
 
 ## O que é essa aplicação? 
 Essa aplicação é um website construido com o framework AngularJs, nossa plataforma se chama *Eicon Movie* e com ela é possível pesquisar por qualquer filme e ver os detalhes como:
@@ -110,7 +109,9 @@ ng serve --o
 
 ## BUGS da aplicação: 
 Aqui estão alguns bugs que eu percebi durante o desenvolvimento que serão consertados em breve.
-- Alguns filmes estão bugando quando é solicitado para ver mais informações sobre eles, podendo:
+**BUGS marcados querem dizer que o bug foi corrigido**
+-  [x] Buscas que retornam menos de 2 filmes bugam a aplicação e é necessário reiniciar (FIX)
+-  [ ] Alguns filmes estão bugando quando é solicitado para ver mais informações sobre eles, podendo:
 
 Não abrir o modal
 
