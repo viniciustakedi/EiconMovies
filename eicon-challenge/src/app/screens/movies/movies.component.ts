@@ -2,13 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormControl } from '@angular/forms';
 
-
 @Component({
   selector: 'app-movies',
   templateUrl: './movies.component.html',
   styleUrls: ['./movies.component.css', '../../../bootstrap-global/style/bootstrap.css']
 })
 export class MoviesComponent implements OnInit {
+
+  // ALTERE AQUI a API Key (v3 auth)
+  api_key = '7b9cf534a88ff61e918279f09548b7c4';
 
   // Dados dos filmes que serão passados para o front-end opcao para 3 resultados
   // Resultado 1
@@ -79,9 +81,6 @@ export class MoviesComponent implements OnInit {
 
 
   queryField = new FormControl(); //query para pegar a(s) palavra(s) que o usuário inseriu
-
-  // ALTERE AQUI a API Key (v3 auth)
-  api_key = '7b9cf534a88ff61e918279f09548b7c4';
 
   url1 = 'https://api.themoviedb.org/3/search/movie?api_key=' + this.api_key + '&language=en-US&query=';
   url2 = '&page=1&include_adult=false';
