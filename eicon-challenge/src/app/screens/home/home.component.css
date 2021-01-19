@@ -29,19 +29,6 @@
     font-weight: 300;
     padding-bottom: 2rem;
 }
-
-/* Div do input search */
-.search-movies {
-    display: flex;
-    align-items: center;
-    padding-bottom: 8rem;
-}
-
-/* id input focus para tirar a borda quando estiver escrecendo */
-#movsearch:focus {
-    outline: none;
-}
-
 /* id botao ao lado do input */
 #searchbutton {
     width: 12rem;
@@ -183,26 +170,7 @@
         flex-direction: column;
     }
 }
-@media(max-width: 890px){
-    #movsearch:hover {
-        box-shadow: 0px 0px 0px 0px #000;
-        margin-right: 2.5rem;
-        -webkit-transform: scale(1.04);
-        transform: scale(1.04);
-    }
-}
 @media(max-width: 830px) {
-    #movsearch {
-        width: 20rem;
-        height: 2rem;
-    }
-    #movsearch:hover {
-        -webkit-transform: scale(1.07);
-        transform: scale(1.07);
-    }
-    .search-movies {
-        padding-bottom: 8rem;
-    }
     .initial-home {
         width: 100%;
         height: 40rem;
@@ -258,10 +226,6 @@
     .initial-home h2 {
         font-size: 1.3rem;
     }
-    .search-movies {
-        display: flex;
-        flex-direction: column;
-    }
     .broken-line-responsive {
         padding-top: 1rem;
     }
@@ -297,10 +261,6 @@
 }
 
 @media(max-width: 335px) {
-    #movsearch {
-        width: 15rem;
-        height: 2rem;
-    }
     #searchbutton {
         width: 10rem;
         height: 2.3rem;

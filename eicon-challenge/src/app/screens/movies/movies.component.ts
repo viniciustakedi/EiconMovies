@@ -6,9 +6,7 @@ import { FormControl } from '@angular/forms';
   selector: 'app-movies',
   templateUrl: './movies.component.html',
   styleUrls: [
-    './movies.component.css',
-    '../../../bootstrap-global/style/bootstrap.css'
-  ]
+    './movies.component.css', '../../../bootstrap-global/style/bootstrap.css']
 })
 export class MoviesComponent implements OnInit {
 
@@ -100,15 +98,15 @@ export class MoviesComponent implements OnInit {
         (item => {
           this.searchmovies = item;
           // Dados filme 1
-          var movie = Object.values(item)[1][0] as any;
-          var vote_average = Object.values(movie)[12] as any;
-          var title = Object.values(movie)[10] as any;
-          var release_date = Object.values(movie)[9] as any;
-          var image = Object.values(movie)[8] as any;
-          var overview = Object.values(movie)[6] as any;
-          var original_language = Object.values(movie)[4] as any;
-          var backdrop = Object.values(movie)[1] as any
-          var id = Object.values(movie)[3] as any
+          var movie = Object.values(item)[1][0] != null ? Object.values(item)[1][0] : "";
+          var vote_average = Object.values(movie)[12] != null ? Object.values(movie)[12] : "";
+          var title = Object.values(movie)[10] != null ? Object.values(movie)[10] : "";
+          var release_date = Object.values(movie)[9] != null ? Object.values(movie)[9] : "";
+          var image = Object.values(movie)[8] != null ? Object.values(movie)[8] : "";
+          var overview = Object.values(movie)[6] != null ? Object.values(movie)[6] : "";
+          var original_language = Object.values(movie)[4] != null ? Object.values(movie)[4] : "/wwemzKWzjKYJFfCeiB57q3r4Bcm.png";
+          var backdrop = Object.values(movie)[1] != null ? Object.values(movie)[1] : "";
+          var id = Object.values(movie)[3] != null ? Object.values(movie)[3] : "";
           this.sVote_average = vote_average;
           this.sTitle = title;
           this.sRelease_date = release_date;
@@ -118,71 +116,73 @@ export class MoviesComponent implements OnInit {
           this.sBackdrop = backdrop;
           this.sId = id;
 
-          // Dados filme 2
-          var movie = Object.values(item)[1][1] as any;
-          var vote_average2 = Object.values(movie)[12] as any;
-          var title2 = Object.values(movie)[10] as any;
-          var release_date2 = Object.values(movie)[9] as any;
-          var image2 = Object.values(movie)[8] as any;
-          var overview2 = Object.values(movie)[6] as any;
-          var original_language2 = Object.values(movie)[4] as any;
-          var backdrop2 = Object.values(movie)[1] as any
-          var id2 = Object.values(movie)[3] as any
-          this.sVote_averageTwo = vote_average2;
-          this.sTitleTwo = title2;
-          this.sRelease_dateTwo = release_date2;
-          this.sImageTwo = image2;
-          this.sOverviewTwo = overview2;
-          this.sOriginal_languageTwo = original_language2;
-          this.sBackdropTwo = backdrop2;
-          this.sIdTwo = id2;
+          if (Object.values(item)[1][1] != null && Object.values(item)[1][1] != undefined && Object.values(item)[1][1] != '') {
+            // Dados filme 2
+            var movie_two = Object.values(item)[1][1] != null ? Object.values(item)[1][1] : "";
+            var vote_average2 = Object.values(movie_two)[12] != null ? Object.values(movie_two)[12] : "";
+            var title2 = Object.values(movie_two)[10] != null ? Object.values(movie_two)[10] : "";
+            var release_date2 = Object.values(movie_two)[9] != null ? Object.values(movie_two)[9] : "";
+            var image2 = Object.values(movie_two)[8] != null ? Object.values(movie_two)[8] : "";
+            var overview2 = Object.values(movie_two)[6] != null ? Object.values(movie_two)[6] : "";;
+            var original_language2 = Object.values(movie_two)[4] != null ? Object.values(movie_two)[4] : "/wwemzKWzjKYJFfCeiB57q3r4Bcm.png";
+            var backdrop2 = Object.values(movie_two)[1] != null ? Object.values(movie_two)[1] : "";
+            var id2 = Object.values(movie_two)[3] != null ? Object.values(movie_two)[3] : "";
+            this.sVote_averageTwo = vote_average2;
+            this.sTitleTwo = title2;
+            this.sRelease_dateTwo = release_date2;
+            this.sImageTwo = image2;
+            this.sOverviewTwo = overview2;
+            this.sOriginal_languageTwo = original_language2;
+            this.sBackdropTwo = backdrop2;
+            this.sIdTwo = id2;
+          }
 
-          // Dados filme 3
-          var movie = Object.values(item)[1][2] as any;
-          var vote_average3 = Object.values(movie)[12] as any;
-          var title3 = Object.values(movie)[10] as any;
-          var release_date3 = Object.values(movie)[9] as any;
-          var image3 = Object.values(movie)[8] as any;
-          var overview3 = Object.values(movie)[6] as any;
-          var original_language3 = Object.values(movie)[4] as any;
-          var backdrop3 = Object.values(movie)[1] as any
-          var id3 = Object.values(movie)[3] as any
-          this.sVote_averageThr = vote_average3; //Dado Dos votos
-          this.sTitleThr = title3; //Dado do titulo
-          this.sRelease_dateThr = release_date3; //Dado data de lançamento
-          this.sImageThr = image3; //capa do filme
-          this.sOverviewThr = overview3; //A descrição do filme
-          this.sOriginal_languageThr = original_language3;//Idioma oficial do filme
-          this.sBackdropThr = backdrop3;
-          this.sIdThr = id3;//Id do filme
-
+          if (Object.values(item)[1][2] !== null && Object.values(item)[1][2] !== undefined && Object.values(item)[1][2] !== '') {
+            // Dados filme 3
+            var movie_thr = Object.values(item)[1][2] != null ? Object.values(item)[1][2] : "";
+            var vote_average3 = Object.values(movie_thr)[12] != null ? Object.values(movie_thr)[12] : "";
+            var title3 = Object.values(movie_thr)[10] != null ? Object.values(movie_thr)[10] : "";
+            var release_date3 = Object.values(movie_thr)[9] != null ? Object.values(movie_thr)[9] : "";
+            var image3 = Object.values(movie_thr)[8] != null ? Object.values(movie_thr)[8] : "";
+            var overview3 = Object.values(movie_thr)[6] != null ? Object.values(movie_thr)[6] : "";
+            var original_language3 = Object.values(movie_thr)[4] != null ? Object.values(movie_thr)[4] : "";
+            var backdrop3 = Object.values(movie_thr)[1] != null ? Object.values(movie_thr)[1] : "/wwemzKWzjKYJFfCeiB57q3r4Bcm.png";
+            var id3 = Object.values(movie_thr)[3] != null ? Object.values(movie_thr)[3] : "";
+            this.sVote_averageThr = vote_average3; //Dado Dos votos
+            this.sTitleThr = title3; //Dado do titulo
+            this.sRelease_dateThr = release_date3; //Dado data de lançamento
+            this.sImageThr = image3; //capa do filme
+            this.sOverviewThr = overview3; //A descrição do filme
+            this.sOriginal_languageThr = original_language3;//Idioma oficial do filme
+            this.sBackdropThr = backdrop3;
+            this.sIdThr = id3;//Id do filme
+          }
           //Request movie 1
-          var urlId1 = 'https://api.themoviedb.org/3/movie/' + this.sId + '?api_key=' + this.api_key + '&language=en-US';
           // Requisição HTTP para buscar o filme pelo id, assim temos mais informações
-          if (this.sId !== '' && this.sId !== null) {
+          if (id != undefined && id != null) {
+            var urlId1 = 'https://api.themoviedb.org/3/movie/' + id + '?api_key=' + this.api_key + '&language=en-US';
             this.http.get(urlId1).subscribe
               (item => {
                 this.movie_by_id = item; //Declarando que item ficará armazenado na array movie_by_id
-
                 // modal movie one
-                var budget = Object.values(item)[3] as any;
+                var budget = Object.values(item)[3] != null ? Object.values(item)[3] : "";
                 //pegar o genero principal
-                var genres_array = Object.values(item)[4];
-                var type_genres = Object.values(genres_array)[0];
-                var genres = Object.values(type_genres)[1];
+                var genres_array = Object.values(item)[4] != null ? Object.values(item)[4] : "";
+                var type_genres = Object.values(genres_array)[0] != null ? Object.values(genres_array)[0] : "";
+                var genres = Object.values(type_genres)[1] != null ? Object.values(type_genres)[1] : "";
 
-                var popularity = Object.values(item)[11];
+                var popularity = Object.values(item)[11] != null ? Object.values(item)[11] : "";;
 
                 //Pegar o estudio e o pais de origem
-                var production_companies_array = Object.values(item)[13];
-                var production_companies = Object.values(production_companies_array)[0];
-                var production_companies_name = Object.values(production_companies)[2];
-                var production_companies_country = Object.values(production_companies)[3];
+                var production_companies_array = Object.values(item)[13] != null ? Object.values(item)[13] : "";;
+                var production_companies = Object.values(production_companies_array)[0] != null ? Object.values(production_companies_array)[0] : "";
+                var production_companies_name = Object.values(production_companies)[2] != null ? Object.values(production_companies)[2] : "";
+                var production_companies_country = Object.values(production_companies)[3] != null ? Object.values(production_companies)[3] : "";
 
-                var revenue = Object.values(item)[16];
-                var runtime = Object.values(item)[17];
-                var status = Object.values(item)[19];
-                var tagline = Object.values(item)[20];
+                var revenue = Object.values(item)[16] != null ? Object.values(item)[16] : "";
+                var runtime = Object.values(item)[17] != null ? Object.values(item)[17] : "";
+                var status = Object.values(item)[19] != null ? Object.values(item)[19] : "";
+                var tagline = Object.values(item)[20] != null ? Object.values(item)[20] : "";
 
                 this.budget_modal = budget; //Despezas com o filme
                 this.genres_modal = genres; //Gênero principal do fulme
@@ -193,35 +193,37 @@ export class MoviesComponent implements OnInit {
                 this.runtime_modal = runtime; //Tempo de execução
                 this.status_modal = status; //Status do filme
                 this.tagline_modal = tagline; //Slogan do filme
+
+                console.log()
+                console.log(item)
               });
           }
 
-          var urlId2 = 'https://api.themoviedb.org/3/movie/' + this.sIdTwo + '?api_key=' + this.api_key + '&language=en-US';
-          if (this.sIdTwo !== '' && this.sIdTwo !== null) {
-            //Request movie 2
+          // //Request movie 2
+          if (id2 != undefined && id != null) {
+            var urlId2 = 'https://api.themoviedb.org/3/movie/' + id2 + '?api_key=' + this.api_key + '&language=en-US';
             // Requisição HTTP para buscar o filme pelo id, assim temos mais informações
             this.http.get(urlId2).subscribe
               (item => {
                 this.movie_by_id_Tw = item
                 //modal movie two
-                var budgetTwo = Object.values(item)[3] as any;
+                var budgetTwo = Object.values(item)[3] != null ? Object.values(item)[3] : "";
                 //pegar o genero principal
-                var genres_arrayTwo = Object.values(item)[4];
-                var type_genresTwo = Object.values(genres_arrayTwo)[0];
-                var genresTwo = Object.values(type_genresTwo)[1];
+                var genres_arrayTwo = Object.values(item)[4] != null ? Object.values(item)[4] : "";
+                var type_genresTwo = Object.values(genres_arrayTwo)[0] != null ? Object.values(genres_arrayTwo)[0] : "";
+                var genresTwo = Object.values(type_genresTwo)[1] != null ? Object.values(type_genresTwo)[1] : "";
 
-                var popularityTwo = Object.values(item)[11];
-
+                var popularityTwo = Object.values(item)[11] != null ? Object.values(item)[11] : "";
                 //Pegar o estudio e o pais de origem
-                var production_companies_arrayTwo = Object.values(item)[13];
-                var production_companiesTwo = Object.values(production_companies_arrayTwo)[0];
-                var production_companies_nameTwo = Object.values(production_companiesTwo)[2];
-                var production_companies_countryTwo = Object.values(production_companiesTwo)[3];
+                var production_companies_arrayTwo = Object.values(item)[13] != null ? Object.values(item)[13] : "";
+                var production_companiesTwo = Object.values(production_companies_arrayTwo)[0] != null ? Object.values(production_companies_arrayTwo)[0] : "";
+                var production_companies_nameTwo = Object.values(production_companiesTwo)[2] != null ? Object.values(production_companiesTwo)[2] : "";
+                var production_companies_countryTwo = Object.values(production_companiesTwo)[3] != null ? Object.values(production_companiesTwo)[3] : "";
 
-                var revenueTwo = Object.values(item)[16];
-                var runtimeTwo = Object.values(item)[17];
-                var statusTwo = Object.values(item)[19];
-                var taglineTwo = Object.values(item)[20];
+                var revenueTwo = Object.values(item)[16] != null ? Object.values(item)[16] : "";
+                var runtimeTwo = Object.values(item)[17] != null ? Object.values(item)[17] : "";
+                var statusTwo = Object.values(item)[19] != null ? Object.values(item)[19] : "";
+                var taglineTwo = Object.values(item)[20] != null ? Object.values(item)[20] : "";
 
                 this.budget_modal_Tw = budgetTwo; //Despezas com o filme
                 this.genres_modal_Tw = genresTwo; //Gênero principal do fulme
@@ -232,36 +234,34 @@ export class MoviesComponent implements OnInit {
                 this.runtime_modal_Tw = runtimeTwo; //Tempo de execução
                 this.status_modal_Tw = statusTwo; //Status do filme
                 this.tagline_modal_Tw = taglineTwo; //Slogan do filme
+
+                console.log(item)
               });
           }
 
 
-          var urlId3 = 'https://api.themoviedb.org/3/movie/' + this.sIdThr + '?api_key=' + this.api_key + '&language=en-US';
-          if (this.sIdThr !== '' && this.sIdThr !== null) {
+          if (id3 != undefined && id != null) {
+            var urlId3 = 'https://api.themoviedb.org/3/movie/' + id3 + '?api_key=' + this.api_key + '&language=en-US';
             // Requisição HTTP para buscar o filme pelo id, assim temos mais informações
             this.http.get(urlId3).subscribe
               (item => {
                 this.movie_by_id_Th = item;
                 //Pegar o estudio e o pais de origem
                 //modal movie three
-                var budgetThr = Object.values(item)[3] as any;
-
+                var budgetThr = Object.values(item)[3] != null ? Object.values(item)[3] : "";
                 //pegar o genero principal
-                var genres_arrayThr = Object.values(item)[4];
-                var type_genresThr = Object.values(genres_arrayThr)[0];
-                var genresThr = Object.values(type_genresThr)[1];
-
-                var popularityThr = Object.values(item)[11];
-                var production_companies_arrayThr = Object.values(item)[13];
-                var production_companiesThr = Object.values(production_companies_arrayThr)[0];
-                var production_companies_nameThr = Object.values(production_companiesThr)[2];
-                var production_companies_countryThr = Object.values(production_companiesThr)[3];
-
-                var revenueThr = Object.values(item)[16];
-                var runtimeThr = Object.values(item)[17];
-                var statusThr = Object.values(item)[19];
-                var taglineThr = Object.values(item)[20];
-
+                var genres_arrayThr = Object.values(item)[4] != null ? Object.values(item)[4] : "";
+                var type_genresThr = Object.values(genres_arrayThr)[0] != null ? Object.values(genres_arrayThr)[0] : "";
+                var genresThr = Object.values(type_genresThr)[1] != null ? Object.values(type_genresThr)[1] : "";
+                var popularityThr = Object.values(item)[11] != null ? Object.values(item)[11] : "";
+                var production_companies_arrayThr = Object.values(item)[13] != null ? Object.values(item)[13] : "";
+                var production_companiesThr = Object.values(production_companies_arrayThr)[0] != null ? Object.values(production_companies_arrayThr)[0] : "";
+                var production_companies_nameThr = Object.values(production_companiesThr)[2] != null ? Object.values(production_companiesThr)[2] : "";
+                var production_companies_countryThr = Object.values(production_companiesThr)[3] != null ? Object.values(production_companiesThr)[3] : "";
+                var revenueThr = Object.values(item)[16] != null ? Object.values(item)[16] : "";
+                var runtimeThr = Object.values(item)[17] != null ? Object.values(item)[17] : "";
+                var statusThr = Object.values(item)[19] != null ? Object.values(item)[19] : "";
+                var taglineThr = Object.values(item)[20] != null ? Object.values(item)[20] : "";
                 this.budget_modal_Th = budgetThr; //Despezas com o filme
                 this.genres_modal_Th = genresThr; //Gênero principal do fulme
                 this.popularity_modal_Th = popularityThr; //Popularidade do filme
@@ -271,12 +271,13 @@ export class MoviesComponent implements OnInit {
                 this.runtime_modal_Th = runtimeThr; //Tempo de execução
                 this.status_modal_Th = statusThr; //Status do filme
                 this.tagline_modal_Th = taglineThr; //Slogan do filme
+                console.log(item);
               });
           }
 
           // Consoles para teste de requisição de api
           // console.log(Object.values(movie)[12] as any);
-          console.log(item);
+          // console.log(item);
         });
     }
   }
@@ -303,7 +304,6 @@ export class MoviesComponent implements OnInit {
     this.runtime_modal_Th = '';
     this.status_modal_Th = '';
     this.tagline_modal_Th = '';
-
 
     // movie 2
     this.sTitleTwo = '';

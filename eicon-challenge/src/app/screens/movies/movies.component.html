@@ -12,7 +12,7 @@
                     [src]="'https://image.tmdb.org/t/p/w500'+sImage" alt="thumb_not_found" />
                 <div class="flex-container-movie">
                     <div class="flex-container-title">
-                        <h1 data-bs-toggle="modal" data-bs-target="#staticBackdrop">{{sTitle}}</h1>
+                        <h1>{{sTitle}}</h1>
                         <p>Date: {{sRelease_date}}</p>
                     </div>
                     <p id="overview">{{sOverview}}</p>
@@ -76,11 +76,11 @@
         <!-- Movie result two -->
         <div class="padding-movies">
             <div class="movie-information" *ngIf="sTitleTwo, sImageTwo">
-                <img id="thumb" data-bs-toggle="modal" data-bs-target="#staticBackdrop-2"
+                <img id="thumb" data-bs-toggle="modal" data-bs-target="#modal-two"
                     [src]="'https://image.tmdb.org/t/p/w500'+sImageTwo" alt="thumb_not_found" />
                 <div class="flex-container-movie">
                     <div class="flex-container-title">
-                        <h1 data-bs-toggle="modal" data-bs-target="#staticBackdrop-2">{{sTitleTwo}}</h1>
+                        <h1>{{sTitleTwo}}</h1>
                         <p>Date: {{sRelease_dateTwo}}</p>
                     </div>
                     <p id="overview">{{sOverviewTwo}}</p>
@@ -92,7 +92,7 @@
             </div>
         </div>
         <!-- Modal two -->
-        <div class="modal fade" id="staticBackdrop-2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        <div class="modal fade" id="modal-two" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-scrollable modal-lg" *ngIf="budget_modal_Tw, sTitleTwo">
                 <div class="modal-content">
@@ -104,7 +104,7 @@
                             <div class="header-about">
                                 <img id="thumb-modal" [src]="'https://image.tmdb.org/t/p/w500'+sImageTwo"
                                     alt="thumb_movie">
-                                    <img id="thumb-modal-backdrop" [src]="'https://image.tmdb.org/t/p/w500'+sBackdropTwo"
+                                <img id="thumb-modal-backdrop" [src]="'https://image.tmdb.org/t/p/w500'+sBackdropTwo"
                                     alt="thumb_movie">
                                 <div class="display-info">
                                     <h3>{{sTitleTwo}}</h3>
@@ -144,11 +144,11 @@
         <!-- Movie result three -->
         <div class="padding-movies">
             <div class="movie-information" *ngIf="sTitleThr, sImageThr">
-                <img id="thumb" data-bs-toggle="modal" data-bs-target="#staticBackdrop-3"
+                <img id="thumb" data-bs-toggle="modal" data-bs-target="#modal-three"
                     [src]="'https://image.tmdb.org/t/p/w500'+sImageThr" alt="thumb_not_found" />
                 <div class="flex-container-movie">
                     <div class="flex-container-title">
-                        <h1 data-bs-toggle="modal" data-bs-target="#staticBackdrop-3">{{sTitleThr}}</h1>
+                        <h1>{{sTitleThr}}</h1>
                         <p>Date: {{sRelease_dateThr}}</p>
                     </div>
                     <p id="overview">{{sOverviewThr}}</p>
@@ -160,7 +160,7 @@
             </div>
         </div>
         <!-- Modal three -->
-        <div class="modal fade" id="staticBackdrop-3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        <div class="modal fade" id="modal-three" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-scrollable modal-lg" *ngIf="budget_modal_Th, sTitleThr">
                 <div class="modal-content">
@@ -172,7 +172,7 @@
                             <div class="header-about">
                                 <img id="thumb-modal" [src]="'https://image.tmdb.org/t/p/w500'+sImageThr"
                                     alt="thumb_movie">
-                                    <img id="thumb-modal-backdrop" [src]="'https://image.tmdb.org/t/p/w500'+sBackdropThr"
+                                <img id="thumb-modal-backdrop" [src]="'https://image.tmdb.org/t/p/w500'+sBackdropThr"
                                     alt="thumb_movie">
                                 <div class="display-info">
                                     <h3>{{sTitleThr}}</h3>
@@ -210,6 +210,6 @@
         </div>
         <!-- end modal Two -->
         <h1 id="warning-movie">search for movies in english or portuguese</h1>
-        <p id="warning-movie-p">Click on the image or title to see more about the movie</p>
+        <p id="warning-movie-p">Click on the image to see more about the movie</p>
     </div>
 </div>

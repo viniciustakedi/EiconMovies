@@ -221,6 +221,7 @@
 /* Alinha texto do overview */
 #text-justify{
     text-align: justify;
+    margin-right: 1rem;
 }
 /* display block para impedir visualizacao da imagem */
 #thumb-modal-backdrop{
