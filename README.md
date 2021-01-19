@@ -112,14 +112,10 @@ Aqui estão alguns bugs que eu percebi durante o desenvolvimento que serão cons
 **Se a caixinha do bug está marcada quer dizer que o bug foi corrigido**
 -  [x] Buscas que retornam menos de 2 filmes bugam a aplicação e é necessário reiniciar (FIX)
 -  [ ] Alguns filmes estão bugando quando é solicitado para ver mais informações sobre eles, podendo:
-
-Não abrir o modal
-
-Ficar em Tela preta com opacidade
-
-Não poder ver mais informações de outros filmes (neste caso é necessário recarregar a página)
-
-Um exeplo deles é o: **Batman: Soul of the Dragon**.
+- Não abrir o modal
+- Ficar em Tela preta com opacidade
+- Não poder ver mais informações de outros filmes (neste caso é necessário recarregar a página)
+- Um exeplo deles é o: **Batman: Soul of the Dragon**.
 
 
 ## Recomendações de pesquisa:
