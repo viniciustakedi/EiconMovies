@@ -5,7 +5,10 @@ import { FormControl } from '@angular/forms';
 @Component({
   selector: 'app-movies',
   templateUrl: './movies.component.html',
-  styleUrls: ['./movies.component.css', '../../../bootstrap-global/style/bootstrap.css']
+  styleUrls: [
+    './movies.component.css',
+    '../../../bootstrap-global/style/bootstrap.css'
+  ]
 })
 export class MoviesComponent implements OnInit {
 
@@ -289,6 +292,19 @@ export class MoviesComponent implements OnInit {
     this.sImageThr = '';
     this.sRelease_dateThr = '';
     this.sIdThr = '';
+    // Definições de dados para o modal
+    this.movie_by_id_Th = '';
+    this.budget_modal_Th = '';
+    this.genres_modal_Th = '';
+    this.popularity_modal_Th = '';
+    this.production_company_modal_Th = '';
+    this.origin_country_modal_Th = '';
+    this.revenue_modal_Th = '';
+    this.runtime_modal_Th = '';
+    this.status_modal_Th = '';
+    this.tagline_modal_Th = '';
+
+
     // movie 2
     this.sTitleTwo = '';
     this.sVote_averageTwo = '';
@@ -297,6 +313,17 @@ export class MoviesComponent implements OnInit {
     this.sImageTwo = '';
     this.sRelease_dateTwo = '';
     this.sIdTwo = '';
+    // Definições de dados para o modal
+    this.movie_by_id_Tw = '';
+    this.budget_modal_Tw = '';
+    this.genres_modal_Tw = '';
+    this.popularity_modal_Tw = '';
+    this.production_company_modal_Tw = '';
+    this.origin_country_modal_Tw = '';
+    this.revenue_modal_Tw = '';
+    this.runtime_modal_Tw = '';
+    this.status_modal_Tw = '';
+    this.tagline_modal_Tw = '';
 
     // movie 1
     this.sTitle = '';
@@ -306,6 +333,18 @@ export class MoviesComponent implements OnInit {
     this.sImage = '';
     this.sRelease_date = '';
     this.sId = '';
+    // Definições de dados para o modal
+    this.movie_by_id = '';
+    this.budget_modal = '';
+    this.genres_modal = '';
+    this.popularity_modal = '';
+    this.production_company_modal = '';
+    this.origin_country_modal = '';
+    this.revenue_modal = '';
+    this.runtime_modal = '';
+    this.status_modal = '';
+    this.tagline_modal = '';
+
   }
 
   ngOnInit(): void { }
