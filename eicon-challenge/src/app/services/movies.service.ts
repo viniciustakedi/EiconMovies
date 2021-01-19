@@ -10,11 +10,11 @@ export class MoviesService {
   //ALTERE AQUI A API KEY (v3 AUTH)
   api_key = '7b9cf534a88ff61e918279f09548b7c4';
 
-  url = 'http://api.themoviedb.org/3/movie/299534?api_key='+this.api_key;
-  urlTwo = 'http://api.themoviedb.org/3/movie/508442?api_key='+this.api_key;
-  urlThr = 'http://api.themoviedb.org/3/movie/129?api_key='+this.api_key;
-  urlFou = 'http://api.themoviedb.org/3/movie/354912?api_key='+this.api_key;
-  urlFiv = 'http://api.themoviedb.org/3/movie/337401?api_key='+this.api_key;
+  url = 'http://api.themoviedb.org/3/movie/299534?api_key=' + this.api_key;
+  urlTwo = 'http://api.themoviedb.org/3/movie/508442?api_key=' + this.api_key;
+  urlThr = 'http://api.themoviedb.org/3/movie/129?api_key=' + this.api_key;
+  urlFou = 'http://api.themoviedb.org/3/movie/354912?api_key=' + this.api_key;
+  urlFiv = 'http://api.themoviedb.org/3/movie/337401?api_key=' + this.api_key;
 
 
   constructor(private http: HttpClient) { }
@@ -23,19 +23,19 @@ export class MoviesService {
     return this.http.get<Movie[]>(this.url);
   }
 
-  listTwo(){
+  listTwo() {
     return this.http.get<any[]>(this.urlTwo);
   }
 
-  listThr(){
+  listThr() {
     return this.http.get<any[]>(this.urlThr);
   }
 
-  listFou(){
+  listFou() {
     return this.http.get<any[]>(this.urlFou);
   }
 
-  listFiv(){
+  listFiv() {
     return this.http.get<any[]>(this.urlFiv);
   }
 }

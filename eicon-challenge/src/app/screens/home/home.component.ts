@@ -21,28 +21,28 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     // Filme estatico um
     this.service.list().subscribe
-    (item => {
+      (item => {
         this.movies = item
-    });
+      });
     // Filme estatico dois
     this.service.listTwo().subscribe
-    (item => {
+      (item => {
         this.moviesTwo = item
-    });
+      });
     // Filme estatico tres
     this.service.listThr().subscribe
-    (item => {
+      (item => {
         this.moviesThr = item
-    });
+      });
     // Filme estatico quatro
     this.service.listFou().subscribe
-    (item => {
+      (item => {
         this.moviesFou = item
-    });
+      });
     // Filme estatico cinco
     this.service.listFiv().subscribe
-    (item => {
+      (item => {
         this.moviesFiv = item
-    });
+      });
   }
 }

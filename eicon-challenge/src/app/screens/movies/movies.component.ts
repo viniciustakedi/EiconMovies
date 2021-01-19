@@ -193,9 +193,6 @@ export class MoviesComponent implements OnInit {
                 this.runtime_modal = runtime; //Tempo de execução
                 this.status_modal = status; //Status do filme
                 this.tagline_modal = tagline; //Slogan do filme
-
-                console.log()
-                console.log(item)
               });
           }
 
@@ -208,6 +205,7 @@ export class MoviesComponent implements OnInit {
                 this.movie_by_id_Tw = item
                 //modal movie two
                 var budgetTwo = Object.values(item)[3] != null ? Object.values(item)[3] : "";
+
                 //pegar o genero principal
                 var genres_arrayTwo = Object.values(item)[4] != null ? Object.values(item)[4] : "";
                 var type_genresTwo = Object.values(genres_arrayTwo)[0] != null ? Object.values(genres_arrayTwo)[0] : "";
@@ -234,8 +232,6 @@ export class MoviesComponent implements OnInit {
                 this.runtime_modal_Tw = runtimeTwo; //Tempo de execução
                 this.status_modal_Tw = statusTwo; //Status do filme
                 this.tagline_modal_Tw = taglineTwo; //Slogan do filme
-
-                console.log(item)
               });
           }
 
@@ -271,7 +267,6 @@ export class MoviesComponent implements OnInit {
                 this.runtime_modal_Th = runtimeThr; //Tempo de execução
                 this.status_modal_Th = statusThr; //Status do filme
                 this.tagline_modal_Th = taglineThr; //Slogan do filme
-                console.log(item);
               });
           }
 

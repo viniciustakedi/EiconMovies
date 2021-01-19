@@ -5,6 +5,7 @@
                 id="movsearch" />
             <input (click)="onSearch();onClear()" type="button" id="searchbutton" value="Search" />
         </div>
+
         <!-- Movie result one -->
         <div class="padding-movies">
             <div class="movie-information" *ngIf="sTitle, sImage">
@@ -23,6 +24,7 @@
                 </div>
             </div>
         </div>
+        <!-- End movie result one -->
         <!-- Modal one -->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -73,6 +75,7 @@
             </div>
         </div>
         <!-- end modal one -->
+
         <!-- Movie result two -->
         <div class="padding-movies">
             <div class="movie-information" *ngIf="sTitleTwo, sImageTwo">
@@ -91,6 +94,7 @@
                 </div>
             </div>
         </div>
+        <!-- End movie result two -->
         <!-- Modal two -->
         <div class="modal fade" id="modal-two" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -141,6 +145,7 @@
             </div>
         </div>
         <!-- end modal Two -->
+
         <!-- Movie result three -->
         <div class="padding-movies">
             <div class="movie-information" *ngIf="sTitleThr, sImageThr">
@@ -159,6 +164,7 @@
                 </div>
             </div>
         </div>
+        <!-- End movie result three -->
         <!-- Modal three -->
         <div class="modal fade" id="modal-three" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -209,6 +215,7 @@
             </div>
         </div>
         <!-- end modal Two -->
+        
         <h1 id="warning-movie">search for movies in english or portuguese</h1>
         <p id="warning-movie-p">Click on the image to see more about the movie</p>
     </div>
