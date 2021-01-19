@@ -109,7 +109,7 @@ ng serve --o
 
 ## BUGS da aplicação: 
 Aqui estão alguns bugs que eu percebi durante o desenvolvimento que serão consertados em breve.
-**BUGS marcados querem dizer que o bug foi corrigido**
+**Se a caixinha do bug está marcada quer dizer que o bug foi corrigido**
 -  [x] Buscas que retornam menos de 2 filmes bugam a aplicação e é necessário reiniciar (FIX)
 -  [ ] Alguns filmes estão bugando quando é solicitado para ver mais informações sobre eles, podendo:
 
