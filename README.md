@@ -110,14 +110,13 @@ ng serve --o
 
 ## BUGS da aplicação: 
 Aqui estão alguns bugs que eu percebi durante o desenvolvimento que serão consertados em breve.
-- Array que retorna menos de 2 filmes na busca impede a visualização detalhada e o site precisa ser recarregado.
-- Poucos filmes estão bugando quando é solicitado para ver mais informações sobre eles, podendo:
+- Alguns filmes estão bugando quando é solicitado para ver mais informações sobre eles, podendo:
 
 Não abrir o modal
 
 Ficar em Tela preta com opacidade
 
-Não poder ver mais informações de outros filmes...necessário recarrecar a página
+Não poder ver mais informações de outros filmes (neste caso é necessário recarregar a página)
 
 Um exeplo deles é o: **Batman: Soul of the Dragon**.
 
@@ -126,6 +125,8 @@ Um exeplo deles é o: **Batman: Soul of the Dragon**.
 - Avengers
 - Jumanji
 - Cars (carros animação pixar)
+- Maze Runner
+- Divergent
 
 ### Teste a versão responsiva está bem legal.
   
